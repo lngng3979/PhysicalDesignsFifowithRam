@@ -1,0 +1,46 @@
+{
+        "DESIGN_NAME": "csv_sfifo_ram",
+        "VERILOG_FILES": ["/home/lanh/20213979/syn/csv_sfifo_ram_conf.v", "/home/lanh/20213979/syn/sky130_sram_1r1w_8x16_8_config.v"],
+        "CLOCK_PORT": "clk",
+        "CLOCK_PERIOD": 10.0,
+	"FALLBACK_SDC_FILE": "/home/lanh/20213979/syn/csv_sfifo_ram.sdc",
+        "FP_SIZING":"absolute",
+        "DIE_AREA":"0 0 320 280",
+	"VDD_NETS": "vccd1",
+	"GND_NETS": "vssd1",
+	"PDN_MACRO_CONNECTIONS": ["u_ram_wrapper vccd1 vssd1 vccd1 vssd1"],
+	"MACROS": {
+                "sky130_sram_16byte_1r1w_16x8_8": {
+                        "instances": {
+                                "u_ram_wrapper": {
+                                        "location": [
+                                                50,
+                                                50
+                                        ],
+                                        "orientation": "N"
+                                }
+			},
+			"lib": {
+                                "*": ["/home/lanh/20213979/syn/openlane_flow/sky130_sram_16byte_1r1w_16x8_8_TT_1p8V_25C.lib"]
+			},
+                        
+                        "gds": [
+                                "/home/lanh/20213979/syn/openlane_flow/sky130_sram_16byte_1r1w_16x8_8.gds"
+                        ],
+                        "lef": [
+                                "/home/lanh/20213979/syn/openlane_flow/sky130_sram_16byte_1r1w_16x8_8.lef"
+                        ]
+                }
+	},
+	"MAX_FANOUT_CONSTRAINT": 5,
+	"MAX_TRANSITION_CONSTRAINT": 0.5,
+	"MAGIC_DRC_USE_GDS": true,
+	"io_delay_constraint":0.25,
+	"MAGIC_CAPTURE_ERRORS": false, 
+	"RUN_LINTER":          0,
+	"RUN_KLAYOUT_XOR": true,
+	"RUN_MAGIC_DRC": true,
+	"RUN_KLAYOUT_DRC": true,
+	"PL_TARGET_DENSITY_PCT": 80 
+
+}
