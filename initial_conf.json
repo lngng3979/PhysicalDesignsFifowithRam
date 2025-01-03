@@ -1,9 +1,10 @@
 {
+
         "DESIGN_NAME": "csv_sfifo_ram",
-        "VERILOG_FILES": ["/home/lanh/20213979/syn/csv_sfifo_ram_conf.v", "/home/lanh/20213979/syn/sky130_sram_1r1w_8x16_8_config.v"],
+        "VERILOG_FILES": ["dir::csv_sfifo_ram_conf.v", "dir::sky130_sram_1r1w_8x16_8_config.v"],
         "CLOCK_PORT": "clk",
         "CLOCK_PERIOD": 10.0,
-	"FALLBACK_SDC_FILE": "/home/lanh/20213979/syn/csv_sfifo_ram.sdc",
+	"FALLBACK_SDC_FILE": "dir::csv_sfifo_ram.sdc",
         "FP_SIZING":"absolute",
         "DIE_AREA":"0 0 320 280",
 	"VDD_NETS": "vccd1",
@@ -21,14 +22,14 @@
                                 }
 			},
 			"lib": {
-                                "*": ["/home/lanh/20213979/syn/openlane_flow/sky130_sram_16byte_1r1w_16x8_8_TT_1p8V_25C.lib"]
+                                "*": ["dir::openlane_flow/sky130_sram_16byte_1r1w_16x8_8_TT_1p8V_25C.lib"]
 			},
                         
                         "gds": [
-                                "/home/lanh/20213979/syn/openlane_flow/sky130_sram_16byte_1r1w_16x8_8.gds"
+                                "dir::openlane_flow/sky130_sram_16byte_1r1w_16x8_8.gds"
                         ],
                         "lef": [
-                                "/home/lanh/20213979/syn/openlane_flow/sky130_sram_16byte_1r1w_16x8_8.lef"
+                                "dir::openlane_flow/sky130_sram_16byte_1r1w_16x8_8.lef"
                         ]
                 }
 	},
